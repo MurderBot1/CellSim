@@ -3,22 +3,26 @@
 
 #include "Util.h"
 #include "Types.h"
+#include "stdint.h"
 
 #include <vector>
 
-struct Prey 
+class Cell
 {
-    LocationData locData;
+    int16_t posX = 0;
+    int16_t posY = 0;
+
+    int Power = 1;
+    int Speed = 1;
+    int Health = 10;
 };
 
-struct Predator 
+struct Virus
 {
-    LocationData locData;
-};
+    float posX = 0;
+    float posY = 0;
 
-struct Plant 
-{
-    LocationData locData;
+    Cell Target;
 };
 
 class Sim
@@ -27,9 +31,9 @@ public:
     Sim();
     ~Sim();
 private:
-    std::vector<Prey> PredatorPopulation;
-    std::vector<Prey> PreyPopulation;
-    std::vector<Prey> PlantPopulation;
+    int Nutrients;
+
+    std::vector<Cell> Cells = std::vector<Cell>(1);
 };
 
 #endif

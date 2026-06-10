@@ -3,8 +3,6 @@
 Sim::Sim()
 {
     Log::LogInfo("Starting Sim");
-
-
 }
 
 Sim::~Sim()
