@@ -1,0 +1,7 @@
+# ninja log v7
+7	694	8027676547739363	bin-int/Release/Sim.o	6d8f5b938647b5dc
+1	694	8027676547682033	bin-int/Release/Main.o	edddc6e57b7df3c
+695	829	8027676554607903	bin/Release/MyProject.exe	1968700cdf111d64
+6	1521	8027683967990101	bin-int/Release/Util.o	259a92cee6ed0314
+1	1529	8027683967954933	bin-int/Release/Sim.o	6d8f5b938647b5dc
+1529	1596	8027683983227547	bin/Release/MyProject.exe	2693ba471750bb16

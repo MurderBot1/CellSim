@@ -1,5 +1,14 @@
+#ifndef SIM_H
+#define SIM_H
+
+#include "Util.h"
+
 class Sim
 {
-    public:
-    private:
+public:
+    Sim();
+    ~Sim();
+private:
 };
+
+#endif

@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "premake",
+            "type": "shell",
+            "command": "premake5",
+            "args": [
+                "ninja",
+                "--file=premake5.lua"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "ninja-release",
+            "type": "shell",
+            "command": "ninja",
+            "args": [
+                "-C", "build",
+                "Release"
+            ],
+            "dependsOn": "premake",
+            "problemMatcher": []
+        },
+        {
+            "label": "run-program",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/bin/Release/MyProject",
+            "dependsOn": "ninja-release",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
