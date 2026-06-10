@@ -3,29 +3,31 @@
 
 struct Prey 
 {
-    float posX;
-    float posY;
+    float posX = 0;
+    float posY = 0;
 };
 
 struct Predator 
 {
-    float PosX;
-    float posY;
+    float posX = 0;
+    float posY = 0;
 };
 
 struct Plant 
 {
-    float PosX;
-    float posY;
+    float posX = 0;
+    float posY = 0;
 };
 
-std::vector<Prey> PredatorPopulation;
-std::vector<Prey> PreyPopulation;
-std::vector<Prey> PlantPopulation;
+std::vector<Prey> PredatorPopulation(100);
+std::vector<Prey> PreyPopulation(100);
+std::vector<Prey> PlantPopulation(100);
 
 Sim::Sim()
 {
     Log::LogInfo("Starting Sim");
+
+
 }
 
 Sim::~Sim()
